@@ -1,0 +1,163 @@
+@chartset 'UTF-8';
+
+body {
+  background-color: #FFEEE4;
+}
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+
+.l-box {
+  max-width: 900px;
+  margin: 0 auto 50px;
+  padding: 0;
+  text-align: center;
+}
+.c-ttl {
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+
+.c-link--box {
+  display: block;
+  position: relative;
+  width: 300px;
+  height: 100px;
+  margin: auto;
+  line-height: 100px;
+}
+
+/* type1 */
+.type1 {
+  position: relative;
+  overflow: hidden;
+  color: #FFEEE4;
+  background-color: #F17F42;
+}
+
+.type1:after {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  width: 135%;
+  left: -10%;
+  top: 0;
+  height: 135%;
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-transform-origin: left top;
+  -moz-transform-origin: left top;
+  -ms-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-transform: skewX(-25deg) scale(0, 1);
+  -moz-transform: skewX(-25deg) scale(0, 1);
+  -ms-transform: skewX(-25deg) scale(0, 1);
+  transform: skewX(-25deg) scale(0, 1);
+}
+
+@media screen and (max-width: 767px) {
+  .type1:active::after {
+    -moz-animation: hoverBright 0.6s cubic-bezier(0.78, 0.07, 0, 1) normal;
+    -webkit-animation: hoverBright 0.6s cubic-bezier(0.78, 0.07, 0, 1) normal;
+    animation: hoverBright 0.6s cubic-bezier(0.78, 0.07, 0, 1) normal;
+  }
+}
+
+@media print, screen and (min-width: 768px) {
+  .type1:hover::after {
+    -moz-animation: hoverBright 0.6s cubic-bezier(0.78, 0.07, 0, 1) normal;
+    -webkit-animation: hoverBright 0.6s cubic-bezier(0.78, 0.07, 0, 1) normal;
+    animation: hoverBright 0.6s cubic-bezier(0.78, 0.07, 0, 1) normal;
+  }
+}
+
+@keyframes hoverBright {
+  50% {
+    -webkit-transform: skewX(-25deg) scale(1, 1);
+    -moz-transform: skewX(-25deg) scale(1, 1);
+    -ms-transform: skewX(-25deg) scale(1, 1);
+    transform: skewX(-25deg) scale(1, 1);
+  }
+  100% {
+    -webkit-transform-origin: right top;
+    -moz-transform-origin: right top;
+    -ms-transform-origin: right top;
+    transform-origin: right top;
+    -webkit-transform: skewX(-25deg) scale(0, 1);
+    -moz-transform: skewX(-25deg) scale(0, 1);
+    -ms-transform: skewX(-25deg) scale(0, 1);
+    transform: skewX(-25deg) scale(0, 1);
+    opacity: .5;
+  }
+}
+
+/* type2 */
+.type2 {
+  position: relative;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  transition: 0.4s;
+  overflow: hidden;
+  background-color: #FFEEE4;
+  border: 1px solid #F17F42;
+  color: #F17F42;
+  line-height: 98px;
+  z-index: 1;
+}
+.type2::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  content: '';
+  width: 120%;
+  height: 100%;
+  background-color: #F17F42;
+  -webkit-transform-origin: right top;
+  -moz-transform-origin: right top;
+  -ms-transform-origin: right top;
+  transform-origin: right top;
+  -webkit-transform: skewX(-30deg) scale(0, 1);
+  -moz-transform: skewX(-30deg) scale(0, 1);
+  -ms-transform: skewX(-30deg) scale(0, 1);
+  transform: skewX(-30deg) scale(0, 1);
+  -webkit-transition: transform 0.4s;
+  -moz-transition: transform 0.4s;
+  -ms-transition: transform 0.4s;
+  transition: transform 0.4s;
+}
+
+@media screen and (max-width: 767px) {
+  .type2:active {
+    color: #FFEEE4;
+  }
+  .type2:active::before {
+    -webkit-transform-origin: left top;
+    -moz-transform-origin: left top;
+    -ms-transform-origin: left top;
+    transform-origin: left top;
+    -webkit-transform: skewX(-30deg) scale(1, 1);
+    -moz-transform: skewX(-30deg) scale(1, 1);
+    -ms-transform: skewX(-30deg) scale(1, 1);
+    transform: skewX(-30deg) scale(1, 1);
+  }
+}
+@media print, screen and (min-width: 768px) {
+  .type2:hover {
+    color: #FFEEE4;
+  }
+  .type2:hover::before {
+    -webkit-transform-origin: left top;
+    -moz-transform-origin: left top;
+    -ms-transform-origin: left top;
+    transform-origin: left top;
+    -webkit-transform: skewX(-30deg) scale(1, 1);
+    -moz-transform: skewX(-30deg) scale(1, 1);
+    -ms-transform: skewX(-30deg) scale(1, 1);
+    transform: skewX(-30deg) scale(1, 1);
+  }
+}
